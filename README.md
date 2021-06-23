@@ -4,7 +4,7 @@ Custom lint rules for grailed
 ## Rules
 | Rule              | Description                                         | Recommended | Fixable |
 | ----------------- | ----------------------------------------------------| ----------- | ------- |
-| jsx-no-ampersands | Enforces ternary returns for jsx ampersands returns | ----------- | ------- |
+| jsx-no-ampersands | Enforces ternary returns for jsx ampersands returns |             |         |
 
 ## How To Test Locally
 1. Installation
