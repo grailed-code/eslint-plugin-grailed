@@ -6,7 +6,7 @@ Custom lint rules for grailed
 | ----------------- | ----------------------------------------------------| ----------- | ------- |
 | jsx-no-ampersands | Enforces ternary returns for jsx ampersands returns |             |         |
 
-## How To Test Locally
+## How To Locally
 1. Installation
 ```
 npm install --save -D ~/path/to/parent/eslint-plugin-grailed
@@ -31,3 +31,7 @@ or add the following to your `package.json` and run `npm install`
   }
 }
 ```
+
+## Unit Testing Lint rules
+All tests live in `tests/lib/rules`. Run this command to test all lint rules:
+``` npm test ```
