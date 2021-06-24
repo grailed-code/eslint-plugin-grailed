@@ -4,9 +4,9 @@
  */
 
 const allRules = {
-    'jsx-no-ampersands': require('./lib/rules/jsx-no-ampersands'),
+  'jsx-no-ampersands': require('./lib/rules/jsx-no-ampersands'),
 }
 
 module.exports = {
-    rules: allRules,
+  rules: allRules,
 }
