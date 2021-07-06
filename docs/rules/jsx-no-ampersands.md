@@ -2,7 +2,7 @@
 This rule disallows use of && inside JSX Embeds to avoid conditional numbers from being rendered.
 
 ## Why?
-Here is an [acrticle](https://kentcdodds.com/blog/use-ternaries-rather-than-and-and-in-jsx) explaining the problems that can happen when you use && to conditionally render content in JSX.
+Here is an [article](https://kentcdodds.com/blog/use-ternaries-rather-than-and-and-in-jsx) explaining the problems that can happen when you use && to conditionally render content in JSX.
 
 ## Rule Details
 Examples of incorrect code for this rule:
