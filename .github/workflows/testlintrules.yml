@@ -17,10 +17,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Run rule tests
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-      - run: |
-        npm install mocha
-        npm test
+      - run: npm install mocha
+      - run: npm test
