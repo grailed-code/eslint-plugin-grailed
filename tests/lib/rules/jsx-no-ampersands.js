@@ -33,6 +33,8 @@ ruleTester.run('jsx-embed-condition', rule, {
     code: '<App>{x ? <div>{y ? <y /> : <z />}</div> : null}</App>'
   }, {
     code: '<App x={x && y}>{x ? <div>{y ? <y /> : <z />}</div> : null}</App>'
+  }, {
+    code: '<App>{x || y}</App>'
   }),
 
   invalid: [{
