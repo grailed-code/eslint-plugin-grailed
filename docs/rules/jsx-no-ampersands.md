@@ -11,6 +11,7 @@ Examples of incorrect code for this rule:
 <div>
   {x && <MyProfile />}
 </div>
+
 <div>
   {x || y && <strong>Hello</strong>}
 </div>
