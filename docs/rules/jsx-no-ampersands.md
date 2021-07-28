@@ -8,7 +8,7 @@ Here is an [article](https://kentcdodds.com/blog/use-ternaries-rather-than-and-a
 Examples of incorrect code for this rule:
 
 <div>
-  {x && <MyProfile />}
+  {x && y}
 </div>
 <div>
   {x || y && <strong>Hello</strong>}
@@ -16,7 +16,7 @@ Examples of incorrect code for this rule:
 Examples of correct code for this rule:
 
 <div>
-  {x ? <MyProfile /> : null}
+  {x ? y : null}
 </div>
 // --
 <div>
