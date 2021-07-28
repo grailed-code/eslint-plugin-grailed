@@ -7,18 +7,22 @@ Here is an [article](https://kentcdodds.com/blog/use-ternaries-rather-than-and-a
 ## Rule Details
 Examples of incorrect code for this rule:
 
+```
 <div>
-  {x && y}
+  {x && <MyProfile />}
 </div>
 <div>
   {x || y && <strong>Hello</strong>}
 </div>
-Examples of correct code for this rule:
+```
 
+Examples of correct code for this rule:
+```
 <div>
-  {x ? y : null}
+  {x ? <MyProfile /> : null}
 </div>
-// --
+
 <div>
   {x || y ? <strong>Hello</strong> : null}
 </div>
+```
