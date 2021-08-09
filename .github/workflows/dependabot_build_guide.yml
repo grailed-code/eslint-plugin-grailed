@@ -1,0 +1,18 @@
+name: "Dependabot build auto comments"
+on:
+  pull_request:
+    branches:
+    - 'dependabot/**'
+jobs:
+  dependabot_comment:
+    runs-on: ubuntu-latest
+    name: Dependabot Comment
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Comment PR
+        uses: thollander/actions-comment-pull-request@3ef806b0792ed581bd16b3e73d424fbec9bd5a04
+        with:
+          message: "See our guide for [Failing Dependabot Builds (Platform)](https://docs.grailed.com/#/Onboarding/PullRequests?id=failing-dependabot-builds-platform)"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
