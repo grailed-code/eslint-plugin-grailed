@@ -1,0 +1,25 @@
+name: "Dependabot build auto comments"
+on:
+  pull_request:
+    branches:
+      - 'master'
+      - 'dependabot/**'
+jobs:
+  dependabot_comment:
+    runs-on: ubuntu-latest
+    name: Dependabot Comment
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Comment PR
+        uses: thollander/actions-comment-pull-request@3ef806b0792ed581bd16b3e73d424fbec9bd5a04
+        with:
+          message: |
+            Occasionally Dependabot will try to upgrade a dependency to a version that breaks our Codeship build. Some fixes are straightforward and can be made directly to the PR, ensuring someone else reviews it afterward. Other failures can be much more complex and should be handled as follows:
+            * On the Github PR run `@dependabot ignore this minor version` so that Dependabot doesn't open another PR for this minor version.
+            * Create a ticket in the Backlog for the Platform Tech Debt Clubhouse board and tag it with the labels dependabot and the corresponding backend or frontend label.
+              * It's useful to link to the failing PR in this ticket.
+            * These tickets are great candidates to be brought up in the appropriate Frontend/Backend Working Group
+            Taken from our docs page guide for [Failing Dependabot Builds (Platform)](https://docs.grailed.com/#/Onboarding/PullRequests?id=failing-dependabot-builds-platform).
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
